@@ -2,11 +2,14 @@ DIVE BUDDY ALERT BAND - PRESENTATION REV B - 2026-09-09
 Concept by Rafael. Revised presentation and engineering handoff.
 
 START HERE
+DBA_Product_Overview.pptx        Seven-slide editable product overview with presenter notes
 DBA_Interactive.html             Revised single-file presentation and 3D annotations
 DBA_Design_Package_RevB.pdf       Revised 11-page concept / engineering brief
 DBA_Annotated_Views_RevB.pdf      Three annotated concept views
 
 WHAT CHANGED
+Keynote refinement: larger product reveal, shorter narrative, hands-on interaction,
+expandable technical specifications by discipline, and a seven-slide meeting deck.
 Product-led headings and audience-facing copy; Rafael credit; rotatable hero model;
 scroll-driven underwater atmosphere; single selected-part connector.
 The revised narrative explains the use case, buyer hypothesis, paired call/range/stop
