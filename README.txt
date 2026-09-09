@@ -1,62 +1,60 @@
-DIVE BUDDY ALERT BAND - PRESENTATION REV B - 2026-09-09
-Concept by Rafael. Revised presentation and engineering handoff.
+DIVE BUDDY ALERT BAND - PRESENTATION REV C - SEPTEMBER 2026
+Concept by Rafael.
 
 START HERE
-DBA_Product_Overview.pptx        Seven-slide editable product overview with presenter notes
-DBA_Interactive.html             Revised single-file presentation and 3D annotations
-DBA_Design_Package_RevB.pdf       Revised 11-page concept / engineering brief
-DBA_Annotated_Views_RevB.pdf      Three annotated concept views
+DBA_Interactive.html            Interactive display/haptic concept and original CAD viewer
+DBA_Product_Overview_RevC.pptx   Editable nine-slide product overview with presenter notes
+DBA_Design_Package_RevC.pdf      Revised concept and engineering brief
+DBA_Annotated_Views_RevB.pdf     Original geometry: annotated nominal drawing views
 
-WHAT CHANGED
-Keynote refinement: larger product reveal, shorter narrative, hands-on interaction,
-expandable technical specifications by discipline, and a seven-slide meeting deck.
-Product-led headings and audience-facing copy; Rafael credit; rotatable hero model;
-scroll-driven underwater atmosphere; single selected-part connector.
-The revised narrative explains the use case, buyer hypothesis, paired call/range/stop
-interaction, economics and evidence boundaries. It adds projected dimension arrows,
-measurement views, numbered part callouts, a charging rationale, a requirements
-register, and a simulator that separates no reply from known distance.
+REV C DISPLAY CONCEPT
+The proposed interface combines tactile alerts with a simple visual display.
+It distinguishes a call being received by the device from a diver acknowledging it.
+Fresh estimated distance is shown on both bands during ranging; the caller can use
+optional distance cadence. Unavailable or stale measurements clear both distance
+and trend. Pairing, battery, low battery and stop states are demonstrated.
+Enlarged screen views and the 3D cap material are appearance/interface studies.
+They do not establish physical screen size, readability, seal or mechanical fit.
 
-This remains a concept-presentation package. No hardware has been built or tested,
-no components have been sourced, and no manufacturing release is represented.
-Costs remain Rev A desk estimates (+/-30%); 20 m is a target. One wrist transducer
-provides distance, not direction. This is an aid to buddy procedures, never a safety
-guarantee or a promise of reunion.
+MECHANICAL BASELINE
+The original eleven-part CAD, meshes, renders and parametric source are unchanged.
+They do not include the new display/window/electronics. Display integration requires
+reconciling the existing coil/cap interference, button access and internal clearances.
+The 38 x 28 x 11.5 mm housing is the original nominal envelope, not a validated
+housing specification for the display variant. The annotated Rev B views describe
+that same original geometry. The original DBA-001 drawing has unresolved discrepancies.
 
-SOURCE AUTHORITY AND UNRESOLVED ITEMS
-CAD, original renders and parametric geometry scripts are unchanged from Rev A.
-Read the revised requirements register before interpreting the original drawing.
-- Source nominal overall height is 84.7 mm including the button; DBA-001 says 88.5.
-- Source coil extends above the nominal cap; internal packaging is unresolved.
-- The original battery-use arithmetic is inconsistent with its stated state currents.
-- Rev A tolerance, scale, depth-rating, material/performance, market and legal claims
-  are not established by the package. They must not be read as released requirements.
+PERFORMANCE AND COST
+20 m range remains a target. One wrist transducer and approximately 65 kHz two-way
+time-of-flight provide distance, not bearing. There is no relative-heading or
+depth-difference capability. A directional buddy-finding feature needs a separately
+defined sensing/estimation architecture; a new screen alone does not supply it.
+This is an aid to buddy procedures, never a safety guarantee or promise of reunion.
+The original +/-30% desk costs and retail target cover the display-free baseline.
+Display-variant cost, power, mass and runtime have not been estimated or established.
+This remains a presentation package, not a hardware development or sourcing program.
 
-FILES
-cad/                            Original STEP assemblies and 11 part STEP/STL files; DXF
-renders/                        Original shaded PNGs
- drawings/                      Original DBA-001 sheet and line-art; legacy reference only
-presentation/                   Reviewed HTML/CSS/JS sources, requirements JSON,
-                                original int16 mesh, SVG annotation generator,
-                                and PDF/presentation build scripts
-legacy/                         Original Rev A PDF and README, preserved as references
- dba_cad.py                      Original parametric CadQuery source
- render.py / drawing_sheet.py   Original render and drawing generators
+CONTENTS
+cad/, drawings/, renders/       Original reference STEP/STL/DXF/drawings/renders
+presentation/                   Editable page, style, interaction and document sources
+legacy/                         Original README; archive also includes Rev A and B PDFs
+ dba_cad.py                     Original parametric CadQuery authority
+ render.py / drawing_sheet.py  Original render and drawing generators
 
-REBUILD PRESENTATION (geometry remains unchanged)
-Python 3: python presentation/drawings.py; python presentation/build.py
-PDF dependencies: reportlab, svglib, Pillow
-Then: python presentation/pdf.py (writes output/pdf/)
-Copy the two PDFs beside DBA_Interactive.html for local download links.
-Serve the folder or open the HTML; Three.js uses the existing public CDN.
-The download links require the sibling files or the published site.
+REBUILD
+python presentation/build.py
+PDF: python presentation/pdf.py (reportlab, svglib, Pillow; output/pdf/)
+Copy the resulting Rev C brief beside the HTML.
+PowerPoint: presentation/deck-build/build.mjs uses @oai/artifact-tool and the Codex
+presentation runtime/finalizer. Paths and output receipt are local authoring settings.
+The finished PPTX is editable independently of the authoring runtime.
+python presentation/package_release.py (requires final PDF/PPTX beside HTML)
+Serve this folder for download links. Three.js uses its existing public CDN.
 
-FUTURE GEOMETRY EDITS
-Edit the parameters in dba_cad.py, regenerate CAD, run render.py and drawing_sheet.py,
-then re-embed the mesh using the existing base64 int16 encoding. Do not hand-edit STEP
-or STL files. Original scripts use /home/claude/out and need an appropriate local
-output path before authorized regeneration. Some original drawing constants are
-independently hard-coded; reconcile the drawing with source changes explicitly.
+GEOMETRY CHANGES
+Edit dba_cad.py parameters, regenerate CAD, rerun render.py and drawing_sheet.py,
+and re-embed meshes in the existing base64 int16 format. Never hand-edit STEP/STL.
+The original scripts target /home/claude/out; adapt output paths before regeneration.
 
 LIVE SITE
 https://buddhacoder.github.io/dive-buddy-alert-band/
