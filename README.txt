@@ -1,5 +1,5 @@
 DIVE BUDDY ALERT BAND - PRESENTATION REV B - 2026-09-09
-Concept by Rafy. Revised presentation and engineering handoff.
+Concept by Rafael. Revised presentation and engineering handoff.
 
 START HERE
 DBA_Interactive.html             Revised single-file presentation and 3D annotations
@@ -7,6 +7,8 @@ DBA_Design_Package_RevB.pdf       Revised 11-page concept / engineering brief
 DBA_Annotated_Views_RevB.pdf      Three annotated concept views
 
 WHAT CHANGED
+Product-led headings and audience-facing copy; Rafael credit; rotatable hero model;
+scroll-driven underwater atmosphere; single selected-part connector.
 The revised narrative explains the use case, buyer hypothesis, paired call/range/stop
 interaction, economics and evidence boundaries. It adds projected dimension arrows,
 measurement views, numbered part callouts, a charging rationale, a requirements
