@@ -21,6 +21,20 @@ drawings/                        Coordinated DBA-001 PDF/PNG, SVG line art
 renders/                         Current render and screen images
 design-data.json                 Regular source parameters and envelopes
 
+FINISH AND SOUND REFINEMENT — 10 SEPTEMBER 2026
+Corrosion resistance is a design requirement. Proposed exterior: silicone
+strap, keeper and button, molded acetal buckle with nonmetal retention, and
+polymer housing and window. No exposed steel pin or charging contacts are
+specified. Material grades, latch strength, seal durability and long-term
+saltwater performance remain unvalidated. All 54 part STL files retain the
+same geometry; finish metadata, renders and linked documents are refreshed.
+
+Underwater sound is optional and starts muted. The sound toggle enables an
+original procedural water-and-bubble soundscape; settings include volume.
+Scrolling deeper gently muffles the ambience. Hiding the page pauses sound;
+resuming requires a click. This is presentation sound design, not a recording
+of an actual dive or a reproduction of DBA device signals.
+
 WHAT CHANGED
 Four screen views: Buddy (bearing and relative depth), Map (both divers),
 Dive (time/depth/motion) and Boat (horizontal reference distance/bearing).
