@@ -1,5 +1,7 @@
 DIVE BUDDY ALERT BAND — PRESENTATION & CAD REV F
 Concept by Rafael | September 2026
+Prepared for Rafael
+Presentation strategy, design & production by The AI Doc
 
 START HERE
 Open DBA_Interactive.html, or visit:
