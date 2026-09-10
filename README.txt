@@ -1,4 +1,4 @@
-DIVE BUDDY ALERT BAND — PRESENTATION & CAD REV F
+DIVE BUDDY ALERT BAND — PRESENTATION REV G / CAD REV F
 Concept by Rafael | September 2026
 Prepared for Rafael
 Presentation strategy, design & production by The AI Doc
@@ -10,10 +10,11 @@ This is the primary presentation, with working 3D, simulated screen views,
 current dimensions and download links. The side depth meter is a scroll effect.
 
 CURRENT FILES
-DBA_Design_Package_RevF.pdf        18-page concept and engineering brief
-DBA_Product_Overview_RevF.pptx     12 editable slides with presenter notes
+DBA_Partner_Brief_RevG.pdf         One-page development-partner brief
+DBA_Design_Package_RevG.pdf        25-page concept and engineering brief
+DBA_Product_Overview_RevG.pptx     14 editable slides with presenter notes
 DBA_Annotated_Views_RevF.pdf       Five current drawing / fit views
-DBA_Package_RevF.zip              Complete current release with legacy references
+DBA_Package_RevG.zip              Complete current release with legacy references
 slides.html                      Optional online slide / drawing viewer
 presentation.html                Redirect to the main interactive presentation
 cad/                             Regular STEP/STL assembly and 18 parts
@@ -22,6 +23,24 @@ cad/fit-variants/cuff/            Cuff CAD, drawings and design manifest
 drawings/                        Coordinated DBA-001 PDF/PNG, SVG line art
 renders/                         Current render and screen images
 design-data.json                 Regular source parameters and envelopes
+
+PRODUCT-DEVELOPMENT BRIEF — 10 SEPTEMBER 2026
+The opening now introduces the complete system and the proposed first market:
+operator-managed recreational boat dives. Operator and diver responsibilities,
+reference-dependent capabilities and first-product priorities are explicit.
+The full four-view demo remains available. Proposed priorities do not remove
+features from the concept or claim that the system has been validated.
+
+presentation/partner-brief.json is the shared source for customer, workflow,
+capabilities, priorities, alternatives/evidence, feasibility decision criteria,
+commercial inputs and the partner request. Rev G adds a one-page partner brief
+and revises the 25-page engineering brief and 14-slide meeting presentation.
+Slides 1–10 are the meeting narrative; slides 11–14 provide supporting detail.
+Current price, margin, volume, development budget and launch date remain open.
+The request is for feasibility and a scoped proposal, not a hardware program.
+No company endorsement, interviews, purchase intent or performance is invented.
+CAD, annotated Rev F views, physical-product renders and scuba audio remain
+unchanged. Four screen captures now exclude the website sound/depth controls.
 
 FINISH AND SOUND REFINEMENT — 10 SEPTEMBER 2026
 Corrosion resistance is a design requirement. Proposed exterior: silicone
@@ -93,7 +112,7 @@ ReportLab/svglib. Slides use the supplied artifact-tool presentation runtime.
 Never hand-edit STEP or STL files. Regenerate all dependent artifacts.
 
 VERSION AUTHORITY
-Current presentation, drawings and CAD are Rev F. Earlier PDFs and the
+Current presentation is Rev G; drawings and CAD remain Rev F. Earlier PDFs and the
 original Rev A package in legacy/ are historical references. Published diver
-reviews and technical references are documented in the Rev F brief; they are
+reviews and technical references are documented in the Rev G brief; they are
 not interviews or validation of DBA hardware.
