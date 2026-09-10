@@ -1,74 +1,67 @@
-DIVE BUDDY ALERT BAND - REV D - SEPTEMBER 2026
+DIVE BUDDY ALERT BAND — PRESENTATION REV E / CAD REV D
 Concept by Rafael.
 
-START HERE
-presentation.html                Browse slides, drawings and all downloads
-DBA_Interactive.html             Current display assembly and interactive device experience
-DBA_Design_Package_RevD.pdf       Current concept and engineering brief
-DBA_Annotated_Views_RevD.pdf      Current dimensioned plan, front section and module section
-DBA_Product_Overview_RevD.pptx    Editable nine-slide overview with presenter notes
-
-CURRENT DESIGN
-The display is now included in the parametric CAD, main 3D inspector, hero viewer,
-STEP/STL files, DXF sections, drawing sheet, renders, PDF and slide deck.
-The 14-part model includes a display body, separate window and button plunger.
-The coil sits beneath the button side of the cap, beside the display; the plunger
-passes through its centre opening. The module remains removable from the band.
-One top button and inductive charging through the sealed cap remain design decisions.
-
-NOMINAL CONCEPT DIMENSIONS
-Housing: 44 x 32 x 17.5 mm; button protrusion: 2.2 mm additional.
-Overall assembly: 70 x 37 x 90.7 mm.
-Relaxed wrist opening: 62 mm; band width: 24 mm; radial wall: 4 mm.
-Display body: 16 x 18 x 2.5 mm; window: 18 x 20 x 1.2 mm.
-Active display area: 14 x 16 mm.
-The generated design-data.json records authoritative parameters and actual bounds.
-These dimensions describe the concept, not a manufacturing release.
-
-DESIGN STATUS
-CAD solids and modeled clearances have been checked for consistency. This does not
-establish real component fit, readability, assembly method, sealing, pressure
-performance, charging efficiency or underwater operation. Supports, wiring, optical
-and magnetic stacks, tolerances, materials and detailed seals remain undefined.
-20 m is a ranging target. One ~65 kHz acoustic transducer provides distance, not
-bearing or relative orientation. DBA is an aid to buddy procedures, never a safety
-guarantee or promise of reunion.
-Original Rev A costs (+/-30%) and retail figures cover the display-free baseline.
-The current display variant's cost, mass and runtime remain unestimated.
-
-REBUILD FROM THE SOURCE
-Use Python with cadquery, numpy, numpy-stl, matplotlib, vtk, Pillow, reportlab and
-svglib installed. The supplied scripts write beside themselves, not to a remote path.
-
-1. python dba_cad.py
-2. python render.py
-3. python drawing_sheet.py
-4. python presentation/embed_mesh.py
-5. python presentation/drawings.py
-6. python presentation/build.py
-7. python presentation/pdf.py
-8. Copy the generated Rev D PDFs from output/pdf/ beside this README.
-9. Build the editable deck with presentation/deck-build/build.mjs in the supplied
-   Codex artifact runtime; use a fresh output/receipt path for the finalizer.
-10. python presentation/build_hub.py
-11. python presentation/package_release.py
-
-Every geometry change starts in dba_cad.py. Regenerate all downstream files and use
-the same base64 int16 mesh format. Never hand-edit STEP/STL.
-The deck is independently editable in presentation software. Rebuilding its source
-uses @oai/artifact-tool and the Codex presentation finalizer; paths are local settings.
-The single-file HTML embeds current meshes and drawings. Three.js uses a public CDN.
-Serve the folder to use relative PDF/PPTX/ZIP download links.
-
-FILES
-cad/           14 part STEP files, 2 STEP assemblies, 14 STLs and 3 DXF sections
-renders/       Regenerated assembled, module, exploded and orthographic PNGs
- drawings/     Current SVG views and DBA-001 dimensioned PDF/PNG
-presentation/  Current site, mesh encoder, annotations, requirements and document sources
-legacy/        Earlier references; release archive includes the original Rev A ZIP
-
-PRESENTATION HUB
-https://buddhacoder.github.io/dive-buddy-alert-band/presentation.html
-
-LIVE SITE
+SHARE THE FULL INTERACTIVE PRESENTATION
 https://buddhacoder.github.io/dive-buddy-alert-band/
+
+This is the primary presentation: the product story, two-diver demonstration,
+rotatable 3D model, band flexibility illustration, fit notes, specifications and
+downloads. The earlier presentation.html link now opens the same full experience.
+The optional online slide viewer is at slides.html.
+
+OPEN LOCALLY
+DBA_Interactive.html              Full interactive presentation
+DBA_Design_Package_RevE.pdf        Product story and engineering brief
+DBA_Product_Overview_RevE.pptx     Editable presentation with presenter notes
+DBA_Annotated_Views_RevD.pdf       Dimensioned views of the current CAD
+slides.html                      Optional slide and drawing viewer
+
+WEARABILITY
+The silicone band is intended to stretch for hand passage and sit around a wrist
+or suit cuff. Its circular CAD shape is relaxed. The electronics module is rigid
+and removable. The current model is one reference size: 62 mm relaxed opening,
+approximately 195 mm inner circumference, 24 mm band width and 4 mm radial wall.
+No wrist/cuff size coverage, silicone grade, hardness, stretch force, recovery or
+maximum extension has been established. The 3D flex and diagrams are illustrations,
+not material simulations, size recommendations or rated extension.
+
+GEOMETRY AND SCOPE
+Presentation Rev E preserves the 14-part Rev D CAD and its encoded base meshes.
+Housing: 44 x 32 x 17.5 mm, plus 2.2 mm button protrusion.
+Overall assembly: 70 x 37 x 90.7 mm.
+Display body: 16 x 18 x 2.5 mm. Window: 18 x 20 x 1.2 mm.
+Active display area: 14 x 16 mm.
+The hero flex view deforms only its displayed silicone mesh and returns exactly
+to the relaxed source. Dimensioned views and exported CAD remain at rest.
+
+One top button, a removable sealed module and inductive charging through the cap
+remain deliberate choices. One approximately 65 kHz acoustic transducer provides
+distance, not buddy bearing or relative orientation. 20 m is a range target.
+The concept is an aid to buddy procedures, never a safety guarantee.
+Rev A costs (+/-30%) and retail figures are historical display-free estimates.
+Current display-variant cost, mass, runtime and real underwater performance remain
+unestablished. The illustrative dive scenario is not a claimed founder experience
+or customer testimonial. These files are not a manufacturing release.
+
+REBUILD
+Geometry changes begin in dba_cad.py, followed by render.py, drawing_sheet.py,
+presentation/embed_mesh.py and presentation/drawings.py. Never hand-edit STEP/STL.
+For presentation changes, maintain presentation/story.json and requirements.json.
+Run presentation/build_fit.py, presentation/build.py, and presentation/pdf.py.
+Build the editable deck with presentation/deck-build/build.mjs, using the Codex
+artifact runtime and a fresh finalizer receipt/output path. Rendered slides feed
+presentation/build_hub.py. Finish with presentation/package_release.py.
+Keep the current source parameters, meshes, drawings and publication synchronized.
+
+The full HTML embeds its model and illustrations; Three.js uses a public CDN.
+Serve the extracted folder for document links. Python CAD/render/document scripts
+use CadQuery, NumPy, numpy-stl, VTK, Pillow, ReportLab and svglib. The deck builder
+uses @oai/artifact-tool and the Codex presentation finalizer.
+
+PACKAGE CONTENTS
+cad/            Current STEP assemblies and parts, STL parts and DXF sections
+drawings/       Dimensioned sheet and CAD views
+renders/        CAD renders and the separate wearability illustration
+presentation/   Site, narrative, requirements, mesh encoder and document sources
+hub-assets/     Preview images for the optional slide viewer
+legacy/         Earlier references, including the original Rev A archive
