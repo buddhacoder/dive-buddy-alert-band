@@ -1,67 +1,78 @@
-DIVE BUDDY ALERT BAND — PRESENTATION REV E / CAD REV D
-Concept by Rafael.
+DIVE BUDDY ALERT BAND — PRESENTATION & CAD REV F
+Concept by Rafael | September 2026
 
-SHARE THE FULL INTERACTIVE PRESENTATION
+START HERE
+Open DBA_Interactive.html, or visit:
 https://buddhacoder.github.io/dive-buddy-alert-band/
+This is the primary presentation, with working 3D, simulated screen views,
+current dimensions and download links. The side depth meter is a scroll effect.
 
-This is the primary presentation: the product story, two-diver demonstration,
-rotatable 3D model, band flexibility illustration, fit notes, specifications and
-downloads. The earlier presentation.html link now opens the same full experience.
-The optional online slide viewer is at slides.html.
+CURRENT FILES
+DBA_Design_Package_RevF.pdf        18-page concept and engineering brief
+DBA_Product_Overview_RevF.pptx     12 editable slides with presenter notes
+DBA_Annotated_Views_RevF.pdf       Five current drawing / fit views
+DBA_Package_RevF.zip              Complete current release with legacy references
+slides.html                      Optional online slide / drawing viewer
+presentation.html                Redirect to the main interactive presentation
+cad/                             Regular STEP/STL assembly and 18 parts
+cad/fit-variants/compact/         Compact CAD, drawings and design manifest
+cad/fit-variants/cuff/            Cuff CAD, drawings and design manifest
+drawings/                        Coordinated DBA-001 PDF/PNG, SVG line art
+renders/                         Current render and screen images
+design-data.json                 Regular source parameters and envelopes
 
-OPEN LOCALLY
-DBA_Interactive.html              Full interactive presentation
-DBA_Design_Package_RevE.pdf        Product story and engineering brief
-DBA_Product_Overview_RevE.pptx     Editable presentation with presenter notes
-DBA_Annotated_Views_RevD.pdf       Dimensioned views of the current CAD
-slides.html                      Optional slide and drawing viewer
+WHAT CHANGED
+Four screen views: Buddy (bearing and relative depth), Map (both divers),
+Dive (time/depth/motion) and Boat (horizontal reference distance/bearing).
+Rev F proposes a separate boat-associated acoustic positioning reference,
+plus pressure and heading sensing in each band. A single wrist transducer
+alone still gives range, not direction. The external reference has a system
+architecture illustration, not fabricated detailed hardware CAD.
 
-WEARABILITY
-The silicone band is intended to stretch for hand passage and sit around a wrist
-or suit cuff. Its circular CAD shape is relaxed. The electronics module is rigid
-and removable. The current model is one reference size: 62 mm relaxed opening,
-approximately 195 mm inner circumference, 24 mm band width and 4 mm radial wall.
-No wrist/cuff size coverage, silicone grade, hardness, stretch force, recovery or
-maximum extension has been established. The 3D flex and diagrams are illustrations,
-not material simulations, size recommendations or rated extension.
+The module is 54 x 38 x 19.5 mm, plus 2.2 mm button protrusion. Display active
+area is 24 x 24 mm. The 18-part model has an adjustable overlapping silicone
+tail, ten adjustment holes, a buckle envelope and a keeper. Compact, Regular
+and Cuff reference diameters are 50, 62 and 78 mm (about 157, 195 and 245 mm
+circular reference circumference). These are nominal layouts, not established
+wearer ranges. Buckle engagement and actual retention remain undefined.
 
-GEOMETRY AND SCOPE
-Presentation Rev E preserves the 14-part Rev D CAD and its encoded base meshes.
-Housing: 44 x 32 x 17.5 mm, plus 2.2 mm button protrusion.
-Overall assembly: 70 x 37 x 90.7 mm.
-Display body: 16 x 18 x 2.5 mm. Window: 18 x 20 x 1.2 mm.
-Active display area: 14 x 16 mm.
-The hero flex view deforms only its displayed silicone mesh and returns exactly
-to the relaxed source. Dimensioned views and exported CAD remain at rest.
+INTERACTION
+The demo starts with two paired bands. Short presses would cycle views;
+a one-second hold would call. The peer short-presses to acknowledge.
+Web tabs and call buttons simulate those actions directly. Device receipt
+and human response are distinct. Settings expose missing peer/reference
+links and stale updates. Missing fixes remove arrows and map points.
+Speeds are relative to the reference, not speed through water. Vertical
+rate is separate from horizontal speed and is not decompression protection.
 
-One top button, a removable sealed module and inductive charging through the cap
-remain deliberate choices. One approximately 65 kHz acoustic transducer provides
-distance, not buddy bearing or relative orientation. 20 m is a range target.
-The concept is an aid to buddy procedures, never a safety guarantee.
-Rev A costs (+/-30%) and retail figures are historical display-free estimates.
-Current display-variant cost, mass, runtime and real underwater performance remain
-unestablished. The illustrative dive scenario is not a claimed founder experience
-or customer testimonial. These files are not a manufacturing release.
+BOUNDARIES
+All screen positions, headings, depth, time, rates and battery values are
+simulated. Navigation requires additional sensing and reference equipment.
+20 m direct range is a target. No navigation accuracy, operating depth,
+runtime, supported wrist range or manufacturing readiness is established.
+An aid to buddy procedures, never a safety or reunion guarantee. Not a
+replacement for a dive computer; no ascent-limit or decompression model.
+Inductive charging through the sealed cap; no band charging port. The module
+remains removable from the strap and the physical button remains on top.
+Original Rev A costs are historical desk estimates, ±30%; they do not price
+Rev F navigation hardware or the acoustic reference. No procurement or
+physical hardware test program is part of this presentation project.
 
-REBUILD
-Geometry changes begin in dba_cad.py, followed by render.py, drawing_sheet.py,
-presentation/embed_mesh.py and presentation/drawings.py. Never hand-edit STEP/STL.
-For presentation changes, maintain presentation/story.json and requirements.json.
-Run presentation/build_fit.py, presentation/build.py, and presentation/pdf.py.
-Build the editable deck with presentation/deck-build/build.mjs, using the Codex
-artifact runtime and a fresh finalizer receipt/output path. Rendered slides feed
-presentation/build_hub.py. Finish with presentation/package_release.py.
-Keep the current source parameters, meshes, drawings and publication synchronized.
+REGENERATION
+Geometry authority: dba_cad.py named parameters. Install CadQuery in Python.
+Run dba_cad.py for Regular, then with --size compact and --size cuff.
+Then run render.py and drawing_sheet.py. Run presentation/build_fit.py,
+presentation/embed_mesh.py and presentation/build.py to update diagrams,
+all three base64 int16 mesh sets and the interactive site. Screen screenshots
+and fit illustration PNG derive from the actual browser via capture_assets.cjs.
+Run presentation/pdf.py and presentation/deck-build/build.mjs for documents.
+Then build_hub.py, build.py and package_release.py in presentation/.
+Render scripts use VTK, NumPy, numpy-stl and Matplotlib. Documents use
+ReportLab/svglib. Slides use the supplied artifact-tool presentation runtime.
+Never hand-edit STEP or STL files. Regenerate all dependent artifacts.
 
-The full HTML embeds its model and illustrations; Three.js uses a public CDN.
-Serve the extracted folder for document links. Python CAD/render/document scripts
-use CadQuery, NumPy, numpy-stl, VTK, Pillow, ReportLab and svglib. The deck builder
-uses @oai/artifact-tool and the Codex presentation finalizer.
-
-PACKAGE CONTENTS
-cad/            Current STEP assemblies and parts, STL parts and DXF sections
-drawings/       Dimensioned sheet and CAD views
-renders/        CAD renders and the separate wearability illustration
-presentation/   Site, narrative, requirements, mesh encoder and document sources
-hub-assets/     Preview images for the optional slide viewer
-legacy/         Earlier references, including the original Rev A archive
+VERSION AUTHORITY
+Current presentation, drawings and CAD are Rev F. Earlier PDFs and the
+original Rev A package in legacy/ are historical references. Published diver
+reviews and technical references are documented in the Rev F brief; they are
+not interviews or validation of DBA hardware.
