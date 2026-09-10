@@ -9,6 +9,14 @@ https://buddhacoder.github.io/dive-buddy-alert-band/
 This is the primary presentation, with working 3D, simulated screen views,
 current dimensions and download links. The side depth meter is a scroll effect.
 
+MOBILE PRESENTATION — 10 SEPTEMBER 2026
+The phone opening puts the rotatable band directly beneath the product name.
+Model controls sit below the model, with touch-sized buttons and selectors.
+Menu opens section links; sound and depth controls use a reserved side margin.
+Swipe sideways on the band to rotate; swipe vertically to scroll the page.
+Download labels use plain language. Product specifications and the current
+PDF, slides, drawings, geometry and recorded audio are unchanged.
+
 CURRENT FILES
 DBA_Partner_Brief_RevG.pdf         One-page development-partner brief
 DBA_Design_Package_RevG.pdf        25-page concept and engineering brief
