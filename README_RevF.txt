@@ -29,11 +29,14 @@ specified. Material grades, latch strength, seal durability and long-term
 saltwater performance remain unvalidated. All 54 part STL files retain the
 same geometry; finish metadata, renders and linked documents are refreshed.
 
-Underwater sound is optional and starts muted. The sound toggle enables an
-original procedural water-and-bubble soundscape; settings include volume.
-Scrolling deeper gently muffles the ambience. Hiding the page pauses sound;
-resuming requires a click. This is presentation sound design, not a recording
-of an actual dive or a reproduction of DBA device signals.
+Scuba ambience now uses a real underwater recording: Scuba_bubbles.mp3 by
+sbvitug (Freesound, CC0). See audio/CREDITS.txt for source and editing notes.
+Sound attempts to autoplay on arrival. If browser policy blocks it, an ordinary
+tap, click or key press starts playback. Mute and volume choices are saved.
+Sound pauses while hidden and resumes when visible if enabled and allowed.
+Mild filtering follows scroll depth while retaining the bubbles. The recording
+is embedded in the single HTML file and included in audio/ for regeneration.
+This is presentation ambience, not the proposed device's acoustic signals.
 
 WHAT CHANGED
 Four screen views: Buddy (bearing and relative depth), Map (both divers),
@@ -80,6 +83,8 @@ presentation/embed_mesh.py and presentation/build.py to update diagrams,
 all three base64 int16 mesh sets and the interactive site. Screen screenshots
 and fit illustration PNG derive from the actual browser via capture_assets.cjs.
 Run presentation/pdf.py and presentation/deck-build/build.mjs for documents.
+To rebuild audio/scuba-loop.mp3, run presentation/prepare_audio.py (FFmpeg +
+NumPy); presentation/build.py embeds the result into the standalone page.
 Then build_hub.py, build.py and package_release.py in presentation/.
 Render scripts use VTK, NumPy, numpy-stl and Matplotlib. Documents use
 ReportLab/svglib. Slides use the supplied artifact-tool presentation runtime.
