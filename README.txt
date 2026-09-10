@@ -2,6 +2,7 @@ DIVE BUDDY ALERT BAND - REV D - SEPTEMBER 2026
 Concept by Rafael.
 
 START HERE
+presentation.html                Browse slides, drawings and all downloads
 DBA_Interactive.html             Current display assembly and interactive device experience
 DBA_Design_Package_RevD.pdf       Current concept and engineering brief
 DBA_Annotated_Views_RevD.pdf      Current dimensioned plan, front section and module section
@@ -49,7 +50,8 @@ svglib installed. The supplied scripts write beside themselves, not to a remote 
 8. Copy the generated Rev D PDFs from output/pdf/ beside this README.
 9. Build the editable deck with presentation/deck-build/build.mjs in the supplied
    Codex artifact runtime; use a fresh output/receipt path for the finalizer.
-10. python presentation/package_release.py
+10. python presentation/build_hub.py
+11. python presentation/package_release.py
 
 Every geometry change starts in dba_cad.py. Regenerate all downstream files and use
 the same base64 int16 mesh format. Never hand-edit STEP/STL.
@@ -64,6 +66,9 @@ renders/       Regenerated assembled, module, exploded and orthographic PNGs
  drawings/     Current SVG views and DBA-001 dimensioned PDF/PNG
 presentation/  Current site, mesh encoder, annotations, requirements and document sources
 legacy/        Earlier references; release archive includes the original Rev A ZIP
+
+PRESENTATION HUB
+https://buddhacoder.github.io/dive-buddy-alert-band/presentation.html
 
 LIVE SITE
 https://buddhacoder.github.io/dive-buddy-alert-band/
